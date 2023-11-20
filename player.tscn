@@ -1,14 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://hgtvgo8mems3"]
+[gd_scene load_steps=4 format=3 uid="uid://hgtvgo8mems3"]
 
 [ext_resource type="PackedScene" uid="uid://7a8wouxgjl37" path="res://art/player.glb" id="1_5ip30"]
+[ext_resource type="Script" path="res://player.gd" id="1_wv0ui"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_371hx"]
 
 [node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_wv0ui")
 
 [node name="Pivot" type="Node3D" parent="."]
 
-[node name="player" parent="Pivot" instance=ExtResource("1_5ip30")]
+[node name="Character" parent="Pivot" instance=ExtResource("1_5ip30")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
